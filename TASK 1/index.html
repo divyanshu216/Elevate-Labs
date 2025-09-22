@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyBrand — Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">MyBrand</div>
+
+
+            <!-- hamburger for small screens -->
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My Landing Page</h1>
+            <p>A clean, simple and responsive landing page built with HTML & CSS.</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by : Divyanshu Gupta
+        <p></p>
+        <div class="social-links" aria-label="Social links">
+            <a href="#" class="social-link" aria-label="Facebook" id="igram"></a>
+            <a href="#" class="social-link" aria-label="Twitter" id="fcb"></a>
+            <a href="#" class="social-link" aria-label="Instagram" id="twit"></a>
+            <a href="https://www.linkedin.com/in/divyanshugupta26/" class="social-link" aria-label="LinkedIn"
+                id="lnkdin"></a>
+        </div>
+        <p>© 2025 MyBrand. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <!-- Small JS for nav toggle -->
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+
+
+        // Close menu when a nav link is clicked (helpful on mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
