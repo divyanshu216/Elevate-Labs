@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">MySite</div>
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger">&#9776;</button>
+            <ul class="nav" id="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="column left">
+            <h2>Left Column</h2>
+            <p>Hello this website is for preview </p>
+        </div>
+        <div class="column right">
+            <h2>Right Column</h2>
+            <p>It is also responsive for the Mobile </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 My Website</p>
+        <p>Created by :- Divyanshu Gupta</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+
+    </script>
+</body>
+
+</html>

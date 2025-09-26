@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Nav links (desktop) */
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hamburger (hidden by default) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+}
+
+.left {
+    background: #f4f4f4;
+}
+
+.right {
+    background: #ddd;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* 📱 Mobile styles */
+@media (max-width: 768px) {
+
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide menu by default */
+    .nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background: #444;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* When menu is active */
+    .nav.active {
+        display: flex;
+    }
+
+    /* Stack columns */
+    .container {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Adjust font sizes */
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    /* Prevent overflow */
+    body,
+    html {
+        overflow-x: hidden;
+    }
+
+    /* Images scale properly */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
